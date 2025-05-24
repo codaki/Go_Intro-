@@ -15,6 +15,14 @@
 - Cloud computing
 - cross platform applications
 
+## Initializing Go
+
+Use the follwing command to initialization of a go project.
+
+```bash
+go mod init <module_name>
+```
+
 ## Syntax for execution
 
 In order to run a go program run the next command in the terminal.
