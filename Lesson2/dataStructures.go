@@ -28,5 +28,15 @@ func dataStructures() {
 	fmt.Println("Length of Array1:", len(arr5))
 
 	//Dynamic array
-
+	//Slice
+	slice1 := []int{1, 2, 3}
+	slice2 := make([]int, 3)    //make function is used to create a slice
+	slice3 := make([]int, 3, 5) //make function is used to create a slice with capacity
+	fmt.Println("Slice1:", slice1)
+	fmt.Println("Slice2:", slice2)
+	fmt.Println("Slice3:", slice3)
+	fmt.Println("Length of Slice3:", len(slice3))
+	fmt.Println("Capacity of Slice3:", cap(slice3)) //cap() function is used to get the capacity of a slice
+	slice3 = append(slice3, 4, 5, 6)                //append() function is used to add elements to a slice
+	fmt.Println("Slice3 after append:", slice3)
 }
