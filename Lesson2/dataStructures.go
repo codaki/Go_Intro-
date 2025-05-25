@@ -39,4 +39,9 @@ func dataStructures() {
 	fmt.Println("Capacity of Slice3:", cap(slice3)) //cap() function is used to get the capacity of a slice
 	slice3 = append(slice3, 4, 5, 6)                //append() function is used to add elements to a slice
 	fmt.Println("Slice3 after append:", slice3)
+
+	var map1 = map[int]string{1: "one", 2: "two", 3: "three"}
+	fmt.Println("Map1:", map1)
+	a := map[string]int{"one": 1, "two": 2, "three": 3}
+	fmt.Println("Map2:", a)
 }

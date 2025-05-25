@@ -174,3 +174,64 @@ output:
 ```go
 [1 2 3]
 ```
+
+## Maps
+
+- A map is an `unordered` collection of key-value pairs.
+- Maps are similar to dictionaries in Python or hash tables in other languages.
+- Maps do not have duplicates keys.
+
+```go
+var myMap  = map[KeyType]ValueType{
+    key1: value1,
+    key2: value2,
+}
+
+b := map[KeyType]ValueType{
+    key1: value1,
+    key2: value2,
+}
+```
+
+- Maps can also be created using the `make` function.
+
+```go
+myMap := make(map[KeyType]ValueType)
+```
+
+- You can add elements to a map using the following syntax:
+
+```go
+myMap[key] = value
+```
+
+- You can delete elements from a map using the following syntax:
+
+```go
+delete(myMap, key)
+```
+
+- You can access elements in a map using the following syntax:
+
+```go
+value := myMap[key]
+```
+
+- You can check if a key exists in a map using the following syntax:
+
+```go
+value, exists := myMap[key]
+if exists {
+    // key exists in the map
+} else {
+    // key does not exist in the map
+}
+```
+
+- You can iterate over a map using the `for` loop with the `range` keyword.
+
+```go
+for key, value := range myMap {
+    fmt.Println(key, value)
+}
+```
