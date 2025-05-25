@@ -25,4 +25,5 @@ func main() {
 	}
 	map1[name] = age
 	fmt.Printf("%v you are %d years old", name, age)
+
 }

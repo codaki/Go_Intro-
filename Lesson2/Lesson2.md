@@ -33,13 +33,21 @@ for index, value := range collection {
 - The `range` loop automatically handles the iteration, so you don't need to manually increment the index.
 - There are no while loops in Go, but the `for` loop can be used as a while loop.
 
-For loop can also be used as a while loop.
+For loop can be used as a while loop.
 
 ```go
-i := 0
-for i < 10 {
-    fmt.Println(i)
-    i++
+for condition {
+    // code to be executed while condition is true
+}
+```
+
+## While?
+
+For loop without initialization and increment can be used as a while loop.
+
+```go
+for{
+    // code to be executed repeatedly
 }
 ```
 
