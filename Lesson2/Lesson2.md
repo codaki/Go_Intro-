@@ -235,3 +235,22 @@ for key, value := range myMap {
     fmt.Println(key, value)
 }
 ```
+
+## Errors
+
+- Go does not have exceptions like some other programming languages (e.g., Java, Python).
+
+- In Go, errors are represented by the `error` type, which is a built-in interface.
+- The `error` interface has a single method, `Error()`, which returns a string representation of the error.
+- Functions that can return an error typically return a value and an error as the last return value.
+
+```go
+import "errors"
+func myFunction() (int, error) {
+    // some code that may produce an error
+    if someCondition {
+        return 0, errors.New("an error occurred")
+    }
+    return 42, nil // no error
+}
+```
