@@ -14,6 +14,17 @@ var myMap map[string]int // nil map
 fmt.Println(myMap == nil) // true
 ```
 
+To verify if a key exists in a map, you can use the two-value assignment form:
+
+```go
+value, exists := myMap["key"]
+if exists {
+    fmt.Println("Key exists with value:", value)
+} else {
+    fmt.Println("Key does not exist")
+}
+```
+
 ## Slices of Slices
 
 A slice can contain other slices, allowing you to create a two-dimensional slice (or more dimensions).
