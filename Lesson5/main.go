@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 // TODO: Implement a function called "counter" that:
 // 1. Returns a function that increments and returns a counter
@@ -29,6 +32,15 @@ func accumulator(initial int) func(int) int {
 	}
 }
 
+type Exponent struct {
+	y float64
+	x float64
+}
+
+func (s Exponent) exec() float64 {
+	return math.Pow(s.x, s.y)
+}
+
 func main() {
 	// Test your implementation
 	c1 := counter()
@@ -49,4 +61,8 @@ func main() {
 	fmt.Println(acc2(7))  // Should print: 7 (0 + 7)
 	fmt.Println(acc1(2))  // Should print: 20 (18 + 2)
 	fmt.Println(acc2(-3)) // Should print: 4 (7 + (-3))
+
+	metodo := Exponent{x: 10, y: 2}
+	fmt.Println(metodo.exec())
+
 }

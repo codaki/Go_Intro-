@@ -33,3 +33,22 @@ func main() {
     fmt.Println(increment()) // 12
 }
 ```
+
+## Methods
+
+Methods in Go are functions that are associated with a type. They allow you to define behavior for your custom types.
+
+```go
+package main
+import "fmt"
+type Rectangle struct {
+    width, height int
+}
+func (r Rectangle) Area() int {
+    return r.width * r.height
+}
+func main() {
+    rect := Rectangle{width: 10, height: 5}
+    fmt.Println("Area of rectangle:", rect.Area()) // Output: Area of rectangle: 50
+}
+```
