@@ -51,3 +51,27 @@ for key, value := range myMap {
     fmt.Println(key, value)
 }
 ```
+
+## Function values
+
+Functions in Go are first-class citizens, meaning they can be assigned to variables, passed as arguments, and returned from other functions.
+
+```go
+func add(x, y int) int {
+    return x + y
+}
+func compute(fn func(float64, float64) float64) float64 {
+	return fn(3, 4)
+}
+
+func main() {
+    sum := add // Assigning function to a variable
+    result := sum(3, 4) // Calling the function through the variable
+    fmt.Println(result) // 7
+    // Passing function as an argument
+    result2 := compute(func(x, y float64) float64 {
+        return x + y
+    })
+    fmt.Println(result2) // 7
+}
+```
